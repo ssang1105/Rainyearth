@@ -1,0 +1,126 @@
+html,body{
+    background-color: #FAFAFA;
+}
+/**
+ * Profile image component
+ */
+.profile-header-container{
+    margin: 0 auto;
+    text-align: center;
+}
+
+.profile-header-img {
+    text-align: center;
+    padding: 30px;
+}
+
+.profile-header-img > img.img-circle {
+    width: 12em;
+    height: 12em;
+    border: 1px solid #222222;
+}
+
+.row{
+    margin-top : 43px;
+}
+
+.user_info {
+    color : white;
+}
+
+.userName_editButton {
+    float: left;
+    margin : 5px 5px 5px 5px;
+}
+.upload_number *{
+    float: left;
+    padding : 5px 5px 5px 5px;
+    font-size: 18px;
+}
+
+#user_name{
+    font-size : 24px;
+}
+
+
+#user_desc{
+    font-size: 18px;
+    padding : 5px 5px 5px 5px;
+}
+#user_upload_num{
+    font-size : 18px;
+}
+
+.upload_videos div{
+    padding : 10px 10px 10px 10px;
+
+}
+
+.img-circle{
+    -webkit-border-radius: 99em;
+    -moz-border-radius: 99em;
+    border-radius: 99em;
+    border: 1px solid #eee;
+    box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);
+}
+.modal-title{
+    color: black;
+}
+.main{
+    padding-top:5px;
+}
+.main div{
+    padding: 10px;
+}
+
+#image-preview {
+    width: 12em;
+    height: 12em;
+    border: 1px solid #222222;
+    position: relative;
+    overflow: hidden;
+    background-color: #ffffff;
+    background-size:100%;
+    background-repeat: no-repeat;
+    color: #ecf0f1;
+
+}
+
+#image-upload {
+    line-height: 100px;
+    font-size: 20px;
+    opacity: 0;
+    background-repeat: no-repeat;
+    width:100%;
+    height:100%;
+    z-index: 10;
+}
+#image-label{
+    position: absolute;
+    z-index: 5;
+    opacity: 0.8;
+    cursor: pointer;
+    background-color: #bdc3c7;
+    height: 50px;
+    font-size: 20px;
+    line-height: 50px;
+    text-transform: uppercase;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    text-align: center;
+}
+
+.error_message{
+    display: none;
+    margin-left:50px;
+    color:darkred;
+}
+
+
+/*.my_container{*/
+    /*background-color: rgba(250, 250, 250, 0.7);*/
+/**/
+/*}*/

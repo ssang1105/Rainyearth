@@ -1,0 +1,35 @@
+
+
+.circle {
+    float:left;
+    display: block;
+    width: 2em;
+    height: 2em;
+    margin-left:0.2em;
+    /*margin: 1em auto;*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-border-radius: 99em;
+    -moz-border-radius: 99em;
+    border-radius: 99em;
+    /*border: 5px solid #eee;*/
+    box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);
+}
+
+
+.btn-default{
+    border-color:#222222;
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 300px) {
+    #video{
+        display: block;
+    }
+}
+@media (min-width: 992px) {
+    #video{
+        display: inline-block;
+    }
+}

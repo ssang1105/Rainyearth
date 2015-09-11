@@ -1,0 +1,42 @@
+
+html,body{
+    height: 100%;
+    background-color: #FAFAFA;
+}
+
+
+.backstretch img {
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+}
+
+body
+{
+    padding-top: 40px;
+}
+
+.signup{
+    text-align: center;
+    background: #EBECED;
+    -moz-box-shadow: 0 0 2px 10px rgba(0,0,0,0.45);
+    -webkit-box-shadow: 0 0 2px 10px rgba(0,0,0,0.45);
+    /*box-shadow: 0 0 1px 1px #000;*/
+    box-shadow : 0 2px 10px rgba(0,0,0,0.45);
+    border-radius:6px;
+
+    position: relative;
+    margin: 140px;
+    padding: 20px 40px 40px;
+
+}
+
+.signup_title {
+    text-align: center;
+    line-height: 300%;
+}
+
+.error_message{
+    display: none;
+    margin-left:50px;
+    color:darkred;
+}

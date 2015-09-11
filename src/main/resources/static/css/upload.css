@@ -1,0 +1,21 @@
+/* Upload */
+.lazy-hidden{background:url(../images/loading.gif) 50% 50% no-repeat #eee}
+.main{
+    padding: 38px 38px 38px 38px;
+}
+
+.upload_input{
+    margin-top: 10px;
+    position: relative;
+    display: table;
+    border-collapse: separate;
+}
+.nav-tabs{
+    margin-top: 10px;
+}
+.modal-footer {
+    background: #f0f0f0;
+    margin: 0 auto;
+    border-top: 1px solid #dadada;
+    padding: 20px;
+}
