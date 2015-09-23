@@ -1,17 +1,15 @@
-<#--<#assign security=JspTaglibs["http://www.springframework.org/security/tags"] />-->
-
-
 <@layout.extends name="layouts/base.ftl">
 <!DOCTYPE html>
 <html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <@layout.put block="head">
 
-
     <link href="/css/header.css" rel="stylesheet" type="text/css">
     <link href="/css/typeahead.css" rel="stylesheet" type="text/css">
     <link href="/css/upload.css" rel="stylesheet" type="text/css">
     <link href="/css/jquery.tagsinput.min.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/jquery.fullPage.css" rel="stylesheet" type="text/css">
     <link href="/css/hello.css" rel="stylesheet" type="text/css">
+
 
     </@layout.put>
 
@@ -70,7 +68,10 @@
             </div>
             <div class="nav pull-right">
                 <#if name??>
-                    <button data-toggle="modal" data-target="#myModal" class="btn btn-large btn-primary navbar_button">Upload</button>
+                    <#-- ****************************************-->
+                    <#--나중에 upload 기능 추가하면 아래 코드 주석 풀어야 함 -->
+                    <#--<button data-toggle="modal" data-target="#myModal" class="btn btn-large btn-primary navbar_button">Upload</button>-->
+                    <#-- ****************************************-->
                 <#else>
                     <a href = "/login"><button data-toggle="modal" data-target="#myModal" class="btn btn-large btn-primary navbar_button">Upload</button></a>
                 </#if>
@@ -80,20 +81,42 @@
         </div> <#-- navbar collapse-->
     </div>
 </nav> <#-- navbar -->
-    <div class="my_container">
-        <div class="container">
-            <div class="row row-centered">
-                <div class="col-md-10 col-centered" id="video" >
-                  <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/3HWFmPeez-M"></iframe>
-                  </div>
+
+<div id="fullpage">
+    <#--첫번째 페이지-->
+    <div class="section">
+        <div class="my_container">
+            <div class="container">
+                <div class="row row-centered">
+                    <div class="col-md-10 col-centered" id="video" >
+                      <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/3HWFmPeez-M"></iframe>
+                      </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    <#-- 두번째 페이지 -->
+    <div class="section">
+        <div class="my_container">
+            <div class="container">
+                <div class="row row-centered">
+                    <div class="col-md-10 col-centered">
+                        <div class="categories col-md-4"><img src="/images/sample_city_4.jpg"></div>
+                        <div class="categories col-md-4"><img src="/images/sample_city_2.jpg"></div>
+                        <div class="categories col-md-4"><img src="/images/sample_city_3.jpg"></div>
+                        <div class="categories col-md-4"><img src="/images/sample_city_6.jpg"></div>
+                        <div class="categories col-md-8"><img src="/images/sample_city_1.jpg"></div>
+                    </div>
+                </div>
+            </div>>
+        </div>
+
+    </div>
 
 
-
+    <#--업로드 버튼 눌렀을 때 모달 (현재 사용 X)-->
     <#if name??>
     <div class="modal fade" id="myModal" role="dialog">
         <div class="container">
@@ -150,6 +173,7 @@
         <script src="/js/typeahead.min.js"></script>
         <script src="/js/jquery.lazyloadxt.js"></script>
         <script src="/js/jquery.tagsinput.min.js"></script>
+        <script src="/js/jquery.fullPage.min.js"></script>
         <script src="/js/hello.js"></script>
 
     </@layout.put>

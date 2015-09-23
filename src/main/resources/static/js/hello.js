@@ -6,7 +6,40 @@
 
 $(document).ready(function(){
 
-    //$(".my_container").backstretch("../resources/images/bg_1.jpg");
+    // 페이지 스크롤
+    $('#fullpage').fullpage({
+
+        //Scrolling
+        css3: true,
+        scrollingSpeed: 700,
+        autoScrolling: true,
+        fitToSection: true,
+        fitToSectionDelay: 700,
+        scrollBar: false,
+        easing: 'easeInOutCubic',
+        easingcss3: 'ease',
+        loopBottom: false,
+        loopTop: false,
+        loopHorizontal: true,
+        continuousVertical: false,
+
+        scrollOverflow: false,
+        touchSensitivity: 15,
+        normalScrollElementTouchThreshold: 5,
+
+        //Accessibility
+        keyboardScrolling: true,
+        animateAnchor: true,
+        recordHistory: true,
+
+        //events
+        onLeave: function(index, nextIndex, direction){},
+        afterLoad: function(anchorLink, index){},
+        afterRender: function(){},
+        afterResize: function(){},
+        afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
+        onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
+    });
 
     var username = $("#m_username").val();
 
@@ -38,28 +71,36 @@ $(document).ready(function(){
         source: states
     });
 
-    // 프로필 메뉴 redirect
-    $('#profile_menu').click(function(){
-        document.location.href = "/profile/" + username;
-    });
 
-    $('#input_url').keyup(function(){
-        if($('#input_url').val().indexOf("youtu.be") != -1){
-            //if(!$('#thumb_img').has("#youtube_image"))
-                $('#thumb_img').prepend('<img id="youtube_image" class="lazy" data-src="http://brantiffy.axisj.com/wp-content/uploads/2015/07/java_8_in_action1.jpg" width="200" height="200"/>');
-            //else
-            //    $('#youtube_image').attr('src',"http://brantiffy.axisj.com/wp-content/uploads/2015/07/java_8_in_action1.jpg");
-        }
-    })
+    // ***************************************** //
+    // 나중에 프로필 메뉴 사용할 때 아래 주석 풀어야 함 !!!!!!!
 
-    // tag 입력할때 탭으로 구분
-    $('#input_tags').tagsInput({
-        width:'auto',
-        height : '70px',
-        'delimiter': [',',';'],   // Or a string with a single delimiter. Ex: ';'
-        'placeholderColor' : '#666666',
-        'defaultText':'Add tags',
-    });
+
+    //// 프로필 메뉴 redirect
+    //$('#profile_menu').click(function(){
+    //    document.location.href = "/profile/" + username;
+    //});
+    //
+    //
+    //$('#input_url').keyup(function(){
+    //    if($('#input_url').val().indexOf("youtu.be") != -1){
+    //        //if(!$('#thumb_img').has("#youtube_image"))
+    //            $('#thumb_img').prepend('<img id="youtube_image" class="lazy" data-src="http://brantiffy.axisj.com/wp-content/uploads/2015/07/java_8_in_action1.jpg" width="200" height="200"/>');
+    //        //else
+    //        //    $('#youtube_image').attr('src',"http://brantiffy.axisj.com/wp-content/uploads/2015/07/java_8_in_action1.jpg");
+    //    }
+    //})
+    //
+    //// tag 입력할때 탭으로 구분
+    //$('#input_tags').tagsInput({
+    //    width:'auto',
+    //    height : '70px',
+    //    'delimiter': [',',';'],   // Or a string with a single delimiter. Ex: ';'
+    //    'placeholderColor' : '#666666',
+    //    'defaultText':'Add tags',
+    //});
+
+    // ***************************************** //
 
 
 });
@@ -67,9 +108,4 @@ $(document).ready(function(){
 $(window).resize(function (){
 });
 
-$.fn.center = function () {
-    this.css("position","absolute");
-    this.css("left", ( $(window).width() - this.width() ) / 2 + "px");
-    return this;
-}
 
