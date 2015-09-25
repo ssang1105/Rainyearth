@@ -1,5 +1,4 @@
 group 'com.rainyearth'
-//group 'com.axisj.boot.examples.spring.social'
 
 version '1.0-SNAPSHOT'
 
@@ -7,6 +6,7 @@ apply plugin: 'java'
 apply plugin: 'idea'
 apply plugin: 'eclipse-wtp'
 apply plugin: 'spring-boot'
+apply plugin: 'war'
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
@@ -48,7 +48,6 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-freemarker")
     compile("org.springframework.boot:spring-boot-starter-data-jpa")
 
-//    compile("orig.springframework.boot:spring-boot-starter-logging")
     compile("org.springframework.social:spring-social-security:${springSocialVersion}")
     compile("org.springframework.social:spring-social-config:${springSocialVersion}")
     compile("org.springframework.social:spring-social-facebook:${springSocialFacebookVersion}")
@@ -64,8 +63,11 @@ dependencies {
 
     compile('joda-time:joda-time:2.3')
     compile('org.codehaus.jackson:jackson-core-asl:1.9.13')
+    compile ('org.springframework.boot:spring-boot-starter-tomcat')
 
     testCompile("org.springframework.boot:spring-boot-starter-test")
+
+
 }
 
 eclipse {
